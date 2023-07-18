@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Course } from '../model/course';
@@ -7,13 +8,12 @@ import { Course } from '../model/course';
 })
 export class CoursesService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   list(): Course[] {
     return [
-      {_id: '1', name: 'Angular', category: 'frond-end'},
-      {_id: '2', name: 'Hibernate', category: 'back-end'}
+      { _id: "1", name: "Angular", category: "front-end" },
+      { _id: "2", name: "Hibernate", category: "back-end" }
     ]
   }
-
 }
